@@ -37,12 +37,12 @@ public class outgoingControler {
     }
 
     @GetMapping("/outgoings/{id}")
-    ResponseEntity<?> readOutgoingById(@PathVariable Id id){
+    ResponseEntity<?> readOutgoingById(@PathVariable int id){
         return ResponseEntity.ok(outgoingsRepository.findById(id));
     }
 
     @PutMapping("/outgoings/{id}")
-    ResponseEntity<?>updateOutgoing(@PathVariable Id id, @RequestBody @Valid outgoing updatedOutgoing){
+    ResponseEntity<?>updateOutgoing(@PathVariable int id, @RequestBody @Valid outgoing updatedOutgoing){
         if(!outgoingsRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
