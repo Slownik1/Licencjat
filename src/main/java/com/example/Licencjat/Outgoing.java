@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "outgoing")
 @Data
-public class outgoing {
+public class Outgoing {
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -22,6 +22,6 @@ public class outgoing {
     @NotBlank(message = "This value can not be blanc !")
     private String user;
 
-    public outgoing() {
+    public Outgoing() {
     }
 }
