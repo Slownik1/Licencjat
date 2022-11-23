@@ -32,11 +32,16 @@ public class outgoingControler {
     }
 
     @GetMapping(value="/outgoings")
-    ResponseEntity<?>readAllTaskAndSortByAmount(Pageable page){
+    ResponseEntity<?>readAllOutgoingAndSortByAmount(Pageable page){
         return ResponseEntity.ok(outgoingsRepository.findAll(page));
     }
 
-    @PutMapping("/outgoings{id}")
+    @GetMapping("/outgoings/{id}")
+    ResponseEntity<?> readOutgoingById(@PathVariable Id id){
+        return ResponseEntity.ok(outgoingsRepository.findById(id));
+    }
+
+    @PutMapping("/outgoings/{id}")
     ResponseEntity<?>updateOutgoing(@PathVariable Id id, @RequestBody @Valid outgoing updatedOutgoing){
         if(!outgoingsRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
