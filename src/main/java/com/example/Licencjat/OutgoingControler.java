@@ -10,38 +10,38 @@ import javax.validation.Valid;
 @RestController
 public class OutgoingControler {
 
-    private final OutgoingsRepository outgoingsRepository;
+    private final OutgoingRepository outgoingRepository;
 
-    public OutgoingControler(OutgoingsRepository outgoingsRepository) {
-        this.outgoingsRepository = outgoingsRepository;
+    public OutgoingControler(OutgoingRepository outgoingRepository) {
+        this.outgoingRepository = outgoingRepository;
     }
 
     @GetMapping(value="/outgoings", params={"!sort", "!page", "!size"})
     ResponseEntity<?> readAllOutgoings(){
-        return ResponseEntity.ok(outgoingsRepository.findAll());
+        return ResponseEntity.ok(outgoingRepository.findAll());
     }
 
     @GetMapping(value="/outgoings")
     ResponseEntity<?>readAllOutgoingAndSortByAmount(Pageable page){
-        return ResponseEntity.ok(outgoingsRepository.findAll(page));
+        return ResponseEntity.ok(outgoingRepository.findAll(page));
     }
 
     @GetMapping("/outgoings/{id}")
     ResponseEntity<?> readOutgoingById(@PathVariable int id){
-        return ResponseEntity.ok(outgoingsRepository.findById(id));
+        return ResponseEntity.ok(outgoingRepository.findById(id));
     }
 
     @PostMapping("/outgoings")
     public ResponseEntity<?> addNewOutgoings(@RequestBody @Valid Outgoing outgoing){
-        return ResponseEntity.ok(outgoingsRepository.save(outgoing));
+        return ResponseEntity.ok(outgoingRepository.save(outgoing));
     }
 
     @PutMapping("/outgoings/{id}")
     ResponseEntity<?>updateOutgoing(@PathVariable int id, @RequestBody @Valid Outgoing updatedOutgoing){
-        if(!outgoingsRepository.existsById(id)) {
+        if(!outgoingRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
-        outgoingsRepository.save(updatedOutgoing);
+        outgoingRepository.save(updatedOutgoing);
         return ResponseEntity.noContent().build();
     }
 
