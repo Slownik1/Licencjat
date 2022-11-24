@@ -2,18 +2,17 @@ package com.example.Licencjat;
 
 
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@RepositoryRestController
-public class outgoingControler {
+@RestController
+public class OutgoingControler {
 
-    private final outgoingsRepository outgoingsRepository;
+    private final OutgoingsRepository outgoingsRepository;
 
-    public outgoingControler(outgoingsRepository outgoingsRepository) {
+    public OutgoingControler(OutgoingsRepository outgoingsRepository) {
         this.outgoingsRepository = outgoingsRepository;
     }
 
@@ -33,7 +32,7 @@ public class outgoingControler {
     }
 
     @PostMapping("/outgoings")
-    ResponseEntity<?> addNewOutgoings(@RequestBody @Valid Outgoing outgoing){
+    public ResponseEntity<?> addNewOutgoings(@RequestBody @Valid Outgoing outgoing){
         return ResponseEntity.ok(outgoingsRepository.save(outgoing));
     }
 
