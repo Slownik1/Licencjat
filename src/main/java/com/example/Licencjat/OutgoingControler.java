@@ -3,11 +3,12 @@ package com.example.Licencjat;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@RestController
+@Controller
 public class OutgoingControler {
 
     private final OutgoingRepository outgoingRepository;
