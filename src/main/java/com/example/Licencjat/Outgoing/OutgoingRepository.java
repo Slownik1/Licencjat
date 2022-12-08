@@ -1,6 +1,6 @@
-package com.example.Licencjat;
+package com.example.Licencjat.Outgoing;
 
-import org.springframework.data.domain.Page;
+import com.example.Licencjat.Outgoing.Outgoing;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 

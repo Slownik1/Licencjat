@@ -1,4 +1,4 @@
-package com.example.Licencjat;
+package com.example.Licencjat.Outgoing;
 
 import lombok.Data;
 

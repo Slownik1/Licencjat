@@ -1,5 +1,6 @@
-package com.example.Licencjat;
+package com.example.Licencjat.Incoming;
 
+import com.example.Licencjat.Incoming.Incoming;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;

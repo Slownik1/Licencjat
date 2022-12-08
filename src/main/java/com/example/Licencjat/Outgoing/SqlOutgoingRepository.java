@@ -1,7 +1,8 @@
-package com.example.Licencjat;
+package com.example.Licencjat.Outgoing;
 
+import com.example.Licencjat.Outgoing.Outgoing;
+import com.example.Licencjat.Outgoing.OutgoingRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 @Repository
