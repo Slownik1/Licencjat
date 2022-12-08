@@ -8,8 +8,8 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name= "income")
-public class Income {
+@Table(name= "incomeing")
+public class Incoming {
 
     @Id
     private Integer Id;
@@ -20,6 +20,6 @@ public class Income {
     @NotBlank(message = "This value can not be empty")
     private String user;
 
-    public Income() {
+    public Incoming() {
     }
 }
