@@ -8,17 +8,18 @@ import java.math.BigDecimal;
 
 @Data
 @Entity
-@Table(name= "incomeing")
+@Table(name= "incoming")
 public class Incoming {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
 
     @Min(value=0, message = "This value can not be less than 0")
     private BigDecimal Amount;
 
     @NotBlank(message = "This value can not be empty")
-    private String user;
+    private String users;
 
     public Incoming() {
     }

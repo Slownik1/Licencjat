@@ -20,7 +20,7 @@ public class Outgoing {
     private BigDecimal amount;
 
     @NotBlank(message = "This value can not be blanc !")
-    private String user;
+    private String users;
 
     public Outgoing() {
     }

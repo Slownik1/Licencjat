@@ -13,7 +13,8 @@ public class ExchangeControler {
         this.exchangeService = exchangeService;
     }
 
-    @GetMapping(path="/getRatio")
+
+    @GetMapping(path="/ratio")
     public String getRatio(@RequestParam (name = "currency") String currency){
 
         return exchangeService.getRatio(currency);
