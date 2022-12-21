@@ -16,7 +16,7 @@ public class OutsidesApi {
 
     public String getRatio(String currency){
 
-        return restTemplate.getForObject(NbpUrl+"/{currency}/", String.class);
+        return restTemplate.getForObject(NbpUrl+"{currency}", String.class);
 
     }
 
