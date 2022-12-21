@@ -2,7 +2,7 @@
 
 <HEAD>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" th:href="@{/style/main.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <BODY>
     <div id="mainDiv">
         <a href="index.html">
-        <img th:src="back.png" id="backImage">
+        <img th:src="@{/style/images/back.png}" id="backImage">
             </a>
         <div id="formBox">
             <form action="" method="post">
