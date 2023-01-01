@@ -2,6 +2,8 @@
 
 <HEAD>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX</title>
     <link rel="stylesheet" th:href="@{/style/main.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,13 +18,13 @@
 <BODY>
     <div id="mainDiv">
 
-        <a href="income.html">
+        <a href="income.html" th:href="@{http://localhost:8080/income}">
             <div id="bigDiv">
                 <img id="image1" th:src="@{/style/images/income.png}" alt="income-image">
                 <p>Add new income</p>
             </div>
         </a>
-        <a href="outcome.html">
+        <a href="outcome.html" th:href="@{http://localhost:8080/outcome}">
             <div id="bigDiv1">
                 <img id="imgOutcome" th:src="@{/style/images/outcome.png}" alt="outcome-image">
                 <p>Add new outcome</p>
