@@ -1,7 +1,8 @@
 <HTML xmlns:th="http://thymeleaf.org">>
 
 <HEAD>
-
+    <meta charset="application/json;charset=UTF-8">
+    <link rel="stylesheet" th:href="@{/style/main.css}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUTCOME</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +22,10 @@
             </a>
         <div id="formBox">
             <!--/*@thymesVar id="Outgoing" type="com.example.Licencjat.Outgoing.Outgoing"*/-->
-            <form action="" method="post" th:action="@{/outgoings}" th:object="${Outgoing}">
+            <form th:object="${Outgoing}" th:action="@{/outgoings}"  action="" method="POST">
                 <p>Insert all data about outcome</p>
-                <input type="number" placeholder="Amount" th:fields="*{amount}"><br>
-                <input type="user" placeholder="User" th:filed="*{users}"><br>
+                <input type="number" placeholder="Amount" th:fields="${amount}"><br>
+                <input type="user" placeholder="User" th:filed="${users}"><br>
                 <input type=submit id="submit" value="SEND"><br>
             </form>
         </div>

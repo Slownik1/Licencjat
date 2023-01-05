@@ -21,7 +21,6 @@ public class WebController {
 
     @GetMapping(value = "/outcome")
     public String Outcome(){
-        var project = new Outgoing();
         return "outcome";
     }
 

@@ -2,6 +2,7 @@ package com.example.Licencjat.Outgoing;
 
 
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -32,7 +33,7 @@ public class OutgoingControler {
         return ResponseEntity.ok(outgoingRepository.findById(id));
     }
 
-    @PostMapping("/outgoings")
+    @PostMapping(value = "/outgoings", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
     public ResponseEntity<?> addNewOutgoings(@RequestBody @Valid Outgoing outgoing){
         return ResponseEntity.ok(outgoingRepository.save(outgoing));
     }
