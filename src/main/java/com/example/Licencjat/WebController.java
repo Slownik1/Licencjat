@@ -20,7 +20,8 @@ public class WebController {
     }
 
     @GetMapping(value = "/outcome")
-    public String Outcome(){
+    public String Outcome(Model model){
+        model.addAttribute("outgoing", new Outgoing());
         return "outcome";
     }
 

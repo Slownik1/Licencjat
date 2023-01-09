@@ -5,6 +5,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -33,9 +35,10 @@ public class OutgoingControler {
         return ResponseEntity.ok(outgoingRepository.findById(id));
     }
 
-    @PostMapping(value = "/outgoings", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE})
-    public ResponseEntity<?> addNewOutgoings(@RequestBody @Valid Outgoing outgoing){
-        return ResponseEntity.ok(outgoingRepository.save(outgoing));
+    @RequestMapping(value = "/outgoings", method = RequestMethod.POST)
+    public String addNewOutgoings(@ModelAttribute("outgoing") Outgoing outgoing, BindingResult bindingResult){
+        outgoingRepository.save(outgoing);
+        return "index";
     }
 
     @PutMapping("/outgoings/{id}")

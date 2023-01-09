@@ -16,11 +16,11 @@ public class Outgoing {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer Id;
 
-    @Min(value = 0, message = "This value can not be less than 0")
+   // @Min(value = 0, message = "This value can not be less than 0")
     private Double amount = 1.0;
 
-    @NotBlank(message = "This value can not be blanc !")
-    private String users;
+   // @NotBlank(message = "This value can not be blanc !")
+    private String users="";
 
     public Outgoing() {
     }
