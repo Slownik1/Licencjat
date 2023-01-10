@@ -2,6 +2,7 @@ package com.example.Licencjat.Incoming;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -30,8 +31,9 @@ public class IncomingControler {
     }
 
     @PostMapping(value="/incomings")
-    ResponseEntity<?> addNewIncomings(@PathVariable @Valid Incoming incoming){
-        return ResponseEntity.ok(incomingRepository.save(incoming));
+    String addNewIncomings(@ModelAttribute Incoming incoming, Model model) {
+        incomingRepository.save(incoming);
+        return "index";
     }
 
     @PutMapping(value="/incomings/{id}")

@@ -1,4 +1,4 @@
-<HTML>
+<HTML xmlns:th="http://thymeleaf.org">
 
 <HEAD>
 
@@ -15,10 +15,10 @@
         <img th:src="@{/style/images/back.png}" id="backImage">
             </a>
         <div id="formBox">
-            <form  action="" method="post">
+            <form  action="#" method="post" th:object="${incoming}" th:action="@{/incomings}">
                 <p>Insert all data about income</p>
-                <input type="number" id="inputText" placeholder="Amount"><br>
-                <input type="user" id="inputText" placeholder="User"><br>
+                <input type="number" th:field="*{amount}" id="inputText" placeholder="Amount"><br>
+                <input type="user" name="users" th:field="*{users}" id="inputText" placeholder="User"><br>
                 <input type=submit id="submit" value="SEND"><br>
             </form>
         </div>

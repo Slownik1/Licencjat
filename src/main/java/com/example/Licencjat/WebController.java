@@ -1,5 +1,6 @@
 package com.example.Licencjat;
 
+import com.example.Licencjat.Incoming.Incoming;
 import com.example.Licencjat.Outgoing.Outgoing;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,7 +16,8 @@ public class WebController {
     }
 
     @RequestMapping(value = "/income")
-    public String Income(){
+    public String Income(Model model){
+        model.addAttribute("incoming", new Incoming());
         return "income";
     }
 
