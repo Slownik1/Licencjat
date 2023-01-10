@@ -17,10 +17,10 @@ public class Outgoing {
     private Integer Id;
 
    // @Min(value = 0, message = "This value can not be less than 0")
-    private Double amount = 1.0;
+    private Double amount;
 
-   // @NotBlank(message = "This value can not be blanc !")
-    private String users="";
+    //@NotBlank(message = "This value can not be blanc !")
+    private String users;
 
     public Outgoing() {
     }

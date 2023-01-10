@@ -2,7 +2,6 @@ package com.example.Licencjat.Outgoing;
 
 
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +9,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class OutgoingControler {
@@ -36,7 +36,7 @@ public class OutgoingControler {
     }
 
     @RequestMapping(value = "/outgoings", method = RequestMethod.POST)
-    public String addNewOutgoings(@ModelAttribute("outgoing") Outgoing outgoing, BindingResult bindingResult){
+    public String addNewOutgoings(@ModelAttribute Outgoing outgoing, Model model){
         outgoingRepository.save(outgoing);
         return "index";
     }

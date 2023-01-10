@@ -25,7 +25,7 @@
             <form th:object="${outgoing}" th:action="@{/outgoings}"  action="#" method="POST">
                 <p>Insert all data about outcome</p>
                 <input type="number" placeholder="Amount" th:field="*{amount}"><br>
-                <input type="user" placeholder="User" th:filed="*{users}"><br>
+                <input type="text" name="users" placeholder="User" th:value="*{users}"><br>
                 <input type=submit id="submit" value="SEND"><br>
             </form>
         </div>
