@@ -1,8 +1,9 @@
-<HTML xmlns:th="http://www.thymeleaf.org">>
+<HTML xmlns:th="http://thymeleaf.org">
 
 <HEAD>
 
-    <link rel="stylesheet" href="main.css" th:href="@{/style/main.css}">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" th:href="@{/style/main.css}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -16,23 +17,34 @@
 <BODY>
 <div id="mainDiv">
 
-    <table>
+    <a href="index.html" th:href="@{http://localhost:8080/index}">
 
+        <img id="backImage" src="back.png" th:src="@{/style/images/back.png}">
+
+    </a>
+<br>
+
+    <select th:field="*{type}">
+
+        <option th:value="outgoing" th:name="outgoings"></option>
+        <option th:value="incoming" th:name="incomings"></option>
+        <option th:value="all" th:name="all"></option>
+
+    </select>
+
+    <table>
         <thead>
         <tr>
+            <th>Added by:</th>
             <th>Amount</th>
-            <th>Name</th>
-
         </tr>
         </thead>
         <tbody>
-        <tr th:each="income, iStat: ${income}">
-            <td th:text="${income.amount}" />
-            <td th:text="${income.users}" />
+        <tr th:each="outgoing : ${outgoing}">
+            <td th:text="${outgoing.users}"></td>
+            <td th:text="${outgoing.amount}"></td>
         </tr>
         </tbody>
-
-
     </table>
 
 </div>

@@ -2,13 +2,20 @@ package com.example.Licencjat;
 
 import com.example.Licencjat.Incoming.Incoming;
 import com.example.Licencjat.Outgoing.Outgoing;
+import com.example.Licencjat.Outgoing.OutgoingService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class WebController {
+public class WebController{
+
+    private final OutgoingService outgoingService;
+
+    public WebController(OutgoingService outgoingService) {
+        this.outgoingService = outgoingService;
+    }
 
     @RequestMapping(value = "/index")
     public String Index(){
@@ -27,8 +34,16 @@ public class WebController {
         return "outcome";
     }
 
-    @RequestMapping("/list")
+    @RequestMapping(value="/list")
     public String List(){
+        return "list";
+    }
+
+    @GetMapping(value="/list", params={"!sort", "!page", "!size"})
+    public String readAllOutgoings(Model model){
+
+        model.addAttribute("outgoing", outgoingService.getOutgoing());
+
         return "list";
     }
 
