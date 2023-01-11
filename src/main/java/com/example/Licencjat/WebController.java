@@ -27,4 +27,9 @@ public class WebController {
         return "outcome";
     }
 
+    @RequestMapping("/list")
+    public String List(){
+        return "list";
+    }
+
 }

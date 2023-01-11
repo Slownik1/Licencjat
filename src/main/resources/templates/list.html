@@ -1,0 +1,41 @@
+<HTML xmlns:th="http://www.thymeleaf.org">>
+
+<HEAD>
+
+    <link rel="stylesheet" href="main.css" th:href="@{/style/main.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+    </style>
+
+</HEAD>
+
+<BODY>
+<div id="mainDiv">
+
+    <table>
+
+        <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Name</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="income, iStat: ${income}">
+            <td th:text="${income.amount}" />
+            <td th:text="${income.users}" />
+        </tr>
+        </tbody>
+
+
+    </table>
+
+</div>
+</BODY>
+
+</HTML>

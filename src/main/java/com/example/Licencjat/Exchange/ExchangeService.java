@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ExchangeService {
 
-    public final OutsidesApi outsidesApi;
+    public final OutsideApi outsidesApi;
 
     String getRatio(String currency){
         return outsidesApi.getRatio(currency);

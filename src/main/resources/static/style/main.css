@@ -110,11 +110,11 @@ a{
     align-content: center;
     padding-top:10%;
 }
-#inputText{
+.inputText{
     background-color: inherit;
     text-align: center;
     border:none;
-    border-bottom: solid;
+    border-bottom:10px solid;
     max-width: 420px;
     max-height: 200px;
     height: auto;
