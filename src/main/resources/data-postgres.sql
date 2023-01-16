@@ -1,3 +1,4 @@
+DROP TABLE IF EXISTS outgoing_reason;
 INSERT INTO outgoing_reason(name) VALUES "Diner";
 INSERT INTO outgoing_reason(name) VALUES "Shoping";
 INSERT INTO outgoing_reason(name) VALUES "Transport";

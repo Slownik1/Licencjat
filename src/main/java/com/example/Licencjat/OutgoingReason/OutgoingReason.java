@@ -10,10 +10,10 @@ import javax.persistence.*;
 public class OutgoingReason {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    Long Id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long Id;
 
-    String name;
+    private String name;
 
     public OutgoingReason() {
     }
