@@ -1,5 +1,6 @@
 package com.example.Licencjat;
 
+import com.example.Licencjat.Exchange.Rate;
 import com.example.Licencjat.Incoming.Incoming;
 import com.example.Licencjat.Outgoing.Outgoing;
 import com.example.Licencjat.Outgoing.OutgoingService;
@@ -46,5 +47,10 @@ public class WebController{
 
         return "list";
     }
+//    @RequestMapping(value="/ratio")
+//    public String Exchange(Model model){
+//        model.addAttribute("ratio", rate);
+//        return "ratio";
+//    }
 
 }

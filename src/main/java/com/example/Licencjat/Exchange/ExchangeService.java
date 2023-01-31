@@ -9,8 +9,8 @@ public class ExchangeService {
 
     public final OutsideApi outsidesApi;
 
-    String getRatio(String currency){
-        return outsidesApi.getRatio(currency);
+    public Rate getRatio(){
+        return outsidesApi.getRatio();
     }
 
 }
