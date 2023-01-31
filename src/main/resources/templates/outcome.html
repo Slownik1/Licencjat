@@ -26,6 +26,14 @@
                 <p>Insert all data about outcome</p>
                 <input type="number" id="inputText" placeholder="Amount" th:field="*{amount}"><br>
                 <input type="text" id="inputText" name="users" placeholder="User" th:value="*{users}"><br>
+
+                <select th:field="*{groupReason}">
+                    <option th:value="'Food'" th:text="'Food'"></option>
+                    <option th:value="'Enterteiment'" th:text="'Enerteiment'"></option>
+                    <option th:value="'Fee'" th:text="'Fee'"></option>
+                    <option th:value="'Other'" th:text="'Other'"></option>
+                </select>
+
                 <input type=submit id="submit" value="SEND"><br>
             </form>
         </div>
