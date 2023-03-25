@@ -24,6 +24,8 @@ public class Incoming {
     @NotBlank(message = "This value can not be empty")
     private String groupReason;
 
+    private String person = "AdminTest";
+
     public Incoming() {
     }
 }

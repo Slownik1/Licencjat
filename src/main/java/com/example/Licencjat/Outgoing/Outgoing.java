@@ -25,6 +25,8 @@ public class Outgoing {
     @NotBlank(message = "This value can not be blanc !")
     private String groupReason;
 
+    private String userName = "AdminTest";
+
     public Outgoing() {
     }
 }
