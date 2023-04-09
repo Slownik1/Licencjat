@@ -1,1 +1,43 @@
-<p>outgoing works!</p>
+<HTML xmlns:th="http://thymeleaf.org">
+
+<HEAD>
+  <meta charset="application/json;charset=UTF-8">
+  <link rel="stylesheet" th:href="@{/style/main.css}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUTCOME</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+  </style>
+
+</HEAD>
+
+<BODY>
+<div id="formDiv">
+  <a href="index.html" th:href="@{http://localhost:8080/index}">
+    <img th:src="@{/style/images/back.png}"  id="backImage">
+  </a>
+  <div id="formBox">
+    <!--/*@thymesVar id="Outgoing" type="com.example.Licencjat.Outgoing.Outgoing"*/-->
+    <form th:object="${outgoing}" th:action="@{/outgoings}"  action="#" method="POST">
+      <p>Insert all data about outcome</p>
+      <input type="number" id="inputText" placeholder="Amount" th:field="*{amount}"><br>
+      <input type="text" id="inputText" name="users" placeholder="User" th:value="*{users}"><br>
+
+      <select th:field="*{groupReason}">
+        <option th:value="'Food'" th:text="'Food'"></option>
+        <option th:value="'Enterteiment'" th:text="'Enerteiment'"></option>
+        <option th:value="'Fee'" th:text="'Fee'"></option>
+        <option th:value="'Other'" th:text="'Other'"></option>
+      </select>
+
+      <input type=submit id="submit" value="SEND"><br>
+    </form>
+  </div>
+</div>
+</BODY>
+
+</HTML>
