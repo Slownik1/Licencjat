@@ -127,27 +127,3 @@ a{
   top:1%;
   left:1%;
 }
-/*income & outcome form*/
-#formBox{
-  align-content: center;
-  padding-top:10%;
-}
-.inputText{
-  background-color: inherit;
-  text-align: center;
-  border:none;
-  border-bottom:10px solid;
-  max-width: 420px;
-  max-height: 200px;
-  height: auto;
-  width: auto;
-}
-#submit{
-  margin:2%;
-  background-color: inherit;
-  text-align: center;
-  border: solid;
-  height: 3%;
-  width: 10%;
-}
-
