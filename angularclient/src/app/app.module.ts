@@ -8,6 +8,7 @@ import { IncomingComponent } from './incoming/incoming.component';
 import { ListComponent } from './list/list.component';
 import { IncomingListComponent } from './incoming/incoming-list/incoming-list.component';
 import { IncomeFormComponent } from './incoming/income-form/income-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { IncomeFormComponent } from './incoming/income-form/income-form.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
