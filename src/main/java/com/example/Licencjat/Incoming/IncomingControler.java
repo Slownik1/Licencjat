@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @Controller
+@CrossOrigin(origins = "http://localhost:4200")
 public class IncomingControler {
 
     private final IncomingRepository incomingRepository;
