@@ -32,7 +32,7 @@ public class IncomingControler {
     }
 
     @PostMapping(value="/incomings")
-    String addNewIncomings(@ModelAttribute Incoming incoming, Model model) {
+    String addNewIncomings(@RequestBody Incoming incoming) {
         incomingRepository.save(incoming);
         return "index";
     }

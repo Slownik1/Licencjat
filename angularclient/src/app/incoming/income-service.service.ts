@@ -12,7 +12,7 @@ export class IncomeServiceService {
   constructor(private http: HttpClient) {}
 
   saveIncome(Income: object): Observable<object>{
-    return this.http.post(this.serverAdress, Income);
+    return this.http.post<object>(this.serverAdress, Income);
 }
 
 
