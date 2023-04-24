@@ -1,6 +1,7 @@
 package com.example.Licencjat.Outgoing;
 
 
+import com.example.Licencjat.Incoming.Incoming;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -39,7 +40,7 @@ public class OutgoingControler {
     }
 
     @RequestMapping(value = "/outgoings", method = RequestMethod.POST)
-    public String addNewOutgoings(@ModelAttribute Outgoing outgoing, Model model){
+    public String addNewOutgoings(@RequestBody Outgoing outgoing){
         outgoingRepository.save(outgoing);
         return "index";
     }

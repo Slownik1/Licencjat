@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { IncomingListComponent } from './incoming/incoming-list/incoming-list.component';
 import { IncomeFormComponent } from './incoming/income-form/income-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     OutgoingComponent,
     ListComponent,
     IncomingListComponent,
-    IncomeFormComponent
+    IncomeFormComponent,
+    OutgoingFormComponent
   ],
   imports: [
     BrowserModule,

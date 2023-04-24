@@ -1,0 +1,28 @@
+<HTML xmlns:th="http://thymeleaf.org">
+
+    <HEAD>
+    
+      <link rel="stylesheet" th:href="@{/style/main.css}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    
+    </HEAD>
+    
+    <BODY>
+    <div id="formDiv">
+      <a href="index.html" th:href="@{http://localhost:8080/index}">
+      </a>
+      <div id="formBox">
+        <p>Insert all data about outcome</p>
+        <form (ngSubmit)="onSubmit()" #outcomeForm="ngForm">
+          <input type="number"  name ="amount" [(ngModel)]="outcome.amount" id="" placeholder="Amount" required #users="ngModel"><br>
+          <input type="user" name="users" [(ngModel)]="outcome.users"  id="inputText" placeholder="User" required #name="ngModel"><br>
+    
+          <input type=submit id="submit" value="SEND"><br>
+        </form>
+      </div>
+    </div>
+    </BODY>
+    
+    </HTML>
