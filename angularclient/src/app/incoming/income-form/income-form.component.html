@@ -16,10 +16,10 @@
   <div id="formBox">
     <p>Insert all data about income</p>
     <form (ngSubmit)="onSubmit()" #incomeForm="ngForm">
-      <input type="number"  name ="amount" [(ngModel)]="income.amount" id="" placeholder="Amount" required #users="ngModel"><br>
-      <input type="user" name="users" [(ngModel)]="income.users"  id="inputText" placeholder="User" required #name="ngModel"><br>
+      <input type="number"  name ="amount" [(ngModel)]="income.amount" id="inputForForm" placeholder="Amount" required #users="ngModel"><br>
+      <input type="user" name="users" [(ngModel)]="income.users"  id="inputForForm" placeholder="User" required #name="ngModel"><br>
 
-      <input type=submit id="submit" value="SEND"><br>
+      <input type=submit id="submitForForm" value="SEND"><br>
     </form>
   </div>
 </div>
