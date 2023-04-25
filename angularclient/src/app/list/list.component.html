@@ -26,9 +26,9 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="outgoing : ${outgoing}">
-      <td th:text="${outgoing.users}"></td>
-      <td th:text="${outgoing.amount}"></td>
+    <tr *ngFor ="let income of income">
+      <td>{{income.users}}</td>
+      <td>{{income.amount}}</td>
     </tr>
     </tbody>
   </table>

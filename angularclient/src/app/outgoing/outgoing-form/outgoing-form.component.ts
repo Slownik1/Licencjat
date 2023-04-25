@@ -11,6 +11,15 @@ import { Observable } from 'rxjs';
 })
 export class OutgoingFormComponent {
 
+  public dataFields: Object={text: 'Reason', value:'Id'};
+  public groupData: Object[]=[
+    {Id: 'Reason1', Reason: 'Taxes'},
+    {Id: 'Reason2', Reason: 'Bils'},
+    {Id: 'Reason1', Reason: 'Food'},
+    {Id: 'Reason1', Reason: 'Enterteiment'},
+    {Id: 'Reason1', Reason: 'Travel'},
+  ]
+
   outcome: Outcome;
 
   constructor(

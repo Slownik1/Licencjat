@@ -9,6 +9,7 @@ import { IncomingListComponent } from './incoming/incoming-list/incoming-list.co
 import { IncomeFormComponent } from './incoming/income-form/income-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
+    DropDownListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
