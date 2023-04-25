@@ -26,9 +26,24 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor ="let income of income">
+    <tr *ngFor ="let income of incomes">
       <td>{{income.users}}</td>
       <td>{{income.amount}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Added by:</th>
+      <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor ="let outcome of outcomes">
+      <td>{{outcome.users}}</td>
+      <td>{{outcome.amount}}</td>
     </tr>
     </tbody>
   </table>

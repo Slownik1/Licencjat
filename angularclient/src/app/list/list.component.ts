@@ -11,17 +11,18 @@ import { OutgoingService } from '../outgoing/outgoing.service';
 })
 export class ListComponent implements OnInit{
 
-  income: Income[];
-  outcome: Outcome[];
+  incomes: Income[];
+  outcomes: Outcome[];
 
   constructor(private incomeService: IncomeService, 
               private outgoingService: OutgoingService){ }
 
   ngOnInit() {
     this.incomeService.findAll().subscribe(data =>{
-      this.income =data;
-      this.outcome = data;
-
+      this.incomes =data;
+    })
+    this.outgoingService.findAll().subscribe(data =>{
+      this.outcomes =data;
     })
   }
 
