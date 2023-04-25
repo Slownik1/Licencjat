@@ -39,7 +39,7 @@ public class OutgoingControler {
         return ResponseEntity.ok(outgoingRepository.findById(id));
     }
 
-    @RequestMapping(value = "/outgoings", method = RequestMethod.POST)
+    @PostMapping(value = "/outgoings")
     public String addNewOutgoings(@RequestBody Outgoing outgoing){
         outgoingRepository.save(outgoing);
         return "index";

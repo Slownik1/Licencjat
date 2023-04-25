@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { OutgoingComponent } from './outgoing/outgoing.component';
 import { IncomeFormComponent } from './incoming/income-form/income-form.component';
+import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
 import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
 
   {path: 'outgoing', component: OutgoingComponent},
+  {path: 'o', component: OutgoingFormComponent},
   {path: 'i', component: IncomeFormComponent},
   {path: 'list', component: ListComponent}
 
