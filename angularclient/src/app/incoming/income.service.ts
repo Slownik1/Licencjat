@@ -9,17 +9,16 @@ import { Observable } from 'rxjs';
 export class IncomeService {
 
   private localUrl: string;
+
   constructor(private http: HttpClient) {
-
     this.localUrl='http://localhost:8080/incomings';
-
   }
 
   public findAll(): Observable<Income[]> {
     return this.http.get<Income[]>(this.localUrl);
   }
 
-  public save(income: Income): Observable<object> {
+  public save(income: Income) {
     return this.http.post<Income>(this.localUrl, income);
   }
 }

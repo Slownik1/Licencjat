@@ -16,7 +16,7 @@ public class Incoming {
     private Integer Id;
 
     @Min(value=0, message = "This value can not be less than 0")
-    private BigDecimal Amount;
+    private BigDecimal amount;
 
     @NotBlank(message = "This value can not be empty")
     private String users;

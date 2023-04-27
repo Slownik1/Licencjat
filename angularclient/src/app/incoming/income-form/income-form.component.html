@@ -18,6 +18,8 @@
     <form (ngSubmit)="onSubmit()" #incomeForm="ngForm">
       <input type="number"  name ="amount" [(ngModel)]="income.amount" id="inputForForm" placeholder="Amount" required #users="ngModel"><br>
       <input type="user" name="users" [(ngModel)]="income.users"  id="inputForForm" placeholder="User" required #name="ngModel"><br>
+      <input type="text" name="groupReason" [(ngModel)]="income.groupReason" id="inputForForm" placeholder="Group Reason" required #groupReason="ngModel"><br>
+      <input type="text" name="description" [(ngModel)]="income.description" id="inputForForm" placeholder="Description" required #description="ngModel"><br>
 
       <input type=submit id="submitForForm" value="SEND"><br>
     </form>

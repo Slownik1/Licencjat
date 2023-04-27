@@ -1,6 +1,9 @@
 export class Income {
 
   amount: number;
-  users: string
+  users: string;
+  groupReason: string;
+  description: string;
+
 
 }
