@@ -21,8 +21,9 @@ public class Incoming {
     @NotBlank(message = "This value can not be empty")
     private String users;
 
+    private String groupReason ="";
 
-    private String groupReason;
+    private String description;
 
     public Incoming() {
     }

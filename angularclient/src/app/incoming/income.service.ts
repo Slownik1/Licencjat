@@ -19,7 +19,7 @@ export class IncomeService {
     return this.http.get<Income[]>(this.localUrl);
   }
 
-  public save(income: Income) {
+  public save(income: Income): Observable<object> {
     return this.http.post<Income>(this.localUrl, income);
   }
 }

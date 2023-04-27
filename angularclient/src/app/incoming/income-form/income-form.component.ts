@@ -21,6 +21,7 @@ export class IncomeFormComponent {
   }
 
   onSubmit(){
+    console.log(this.income)
     this.incomeService.save(this.income).subscribe(result =>this.gotoIncomeList());
   }
 
