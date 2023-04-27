@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -25,6 +26,7 @@ public class Incoming {
 
     private String description;
 
+    private LocalDate insertDate = LocalDate.now();
     public Incoming() {
     }
 }

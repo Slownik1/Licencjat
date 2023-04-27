@@ -6,6 +6,11 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.Date;
+
+import static com.fasterxml.jackson.databind.type.LogicalType.DateTime;
 
 @Entity
 @Table(name = "outgoing")
@@ -25,6 +30,8 @@ public class Outgoing {
     private String groupReason ="";
 
     private String description;
+
+    private LocalDate insertDate = LocalDate.now();
 
     public Outgoing() {
     }

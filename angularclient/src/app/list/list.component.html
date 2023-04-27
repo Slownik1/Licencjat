@@ -23,12 +23,16 @@
     <tr>
       <th>Added by:</th>
       <th>Amount</th>
+      <th>Reason</th>
+      <th>Description</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor ="let income of incomes">
       <td>{{income.users}}</td>
       <td>{{income.amount}}</td>
+      <td>{{income.groupReason}}</td>
+      <td>{{income.description}}</td>
     </tr>
     </tbody>
   </table>
@@ -38,12 +42,16 @@
     <tr>
       <th>Added by:</th>
       <th>Amount</th>
+      <th>Reason</th>
+      <th>Description</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor ="let outcome of outcomes">
       <td>{{outcome.users}}</td>
       <td>{{outcome.amount}}</td>
+      <td>{{outcome.groupReason}}</td>
+      <td>{{outcome.description}}</td>
     </tr>
     </tbody>
   </table>
