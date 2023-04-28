@@ -4,5 +4,6 @@ export class Outcome {
     amount: number;
     groupReason: string;
     description: string;
+    insertDate: string;
 
 }

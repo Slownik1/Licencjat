@@ -9,6 +9,8 @@ import { IncomeFormComponent } from './incoming/income-form/income-form.componen
 import { HttpClientModule } from '@angular/common/http';
 import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
 import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { NgxChartsModule }from '@swimlane/ngx-charts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
     AppRoutingModule,
     FormsModule,
     DropDownListModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

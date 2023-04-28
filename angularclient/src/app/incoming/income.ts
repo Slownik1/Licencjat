@@ -4,6 +4,5 @@ export class Income {
   users: string;
   groupReason: string;
   description: string;
-
-
+  insertDate: string;
 }

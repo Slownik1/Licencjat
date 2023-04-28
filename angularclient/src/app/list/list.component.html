@@ -33,6 +33,7 @@
       <td>{{income.amount}}</td>
       <td>{{income.groupReason}}</td>
       <td>{{income.description}}</td>
+      <td>{{income.insertDate}}</td>
     </tr>
     </tbody>
   </table>
@@ -52,11 +53,28 @@
       <td>{{outcome.amount}}</td>
       <td>{{outcome.groupReason}}</td>
       <td>{{outcome.description}}</td>
+      <td>{{outcome.insertDate}}</td>
     </tr>
     </tbody>
   </table>
-
 </div>
+<div id="formDiv">
+
+<ngx-charts-bar-vertical 
+    [view]="[1000,400]"
+    [results]="incomes"
+    [xAxisLabel]="'amount'"
+    [legendTitle]="'Income'"
+    [yAxisLabel]="'users'"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxis]="true"
+    [yAxis]="true"
+    [gradient]="true">
+</ngx-charts-bar-vertical>
+</div>
+
 </BODY>
 
 </HTML>
