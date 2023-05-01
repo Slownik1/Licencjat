@@ -14,10 +14,7 @@
 </HEAD>
 
 <BODY>
-<div id="formDiv">
-  <br>
-
-
+<div id="divIncome">
   <table>
     <thead>
     <tr>
@@ -28,16 +25,18 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor ="let income of incomes">
+    <tr *ngFor ="let income of incomes" id="incomeTr">
       <td>{{income.users}}</td>
       <td>{{income.amount}}</td>
       <td>{{income.groupReason}}</td>
       <td>{{income.description}}</td>
       <td>{{income.insertDate}}</td>
+      <td><img src="../assets/img/trash.png"></td>
     </tr>
     </tbody>
   </table>
-
+</div>
+  <div>
   <table>
     <thead>
     <tr>
@@ -48,32 +47,18 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor ="let outcome of outcomes">
+    <tr *ngFor ="let outcome of outcomes" id="outcomeTr">
       <td>{{outcome.users}}</td>
       <td>{{outcome.amount}}</td>
       <td>{{outcome.groupReason}}</td>
       <td>{{outcome.description}}</td>
       <td>{{outcome.insertDate}}</td>
+      <td><img src="../assets/img/trash.png"></td>
     </tr>
     </tbody>
   </table>
 </div>
-<div id="formDiv">
 
-<ngx-charts-bar-vertical 
-    [view]="[1000,400]"
-    [results]="incomes"
-    [xAxisLabel]="'amount'"
-    [legendTitle]="'Income'"
-    [yAxisLabel]="'users'"
-    [legend]="true"
-    [showXAxisLabel]="true"
-    [showYAxisLabel]="true"
-    [xAxis]="true"
-    [yAxis]="true"
-    [gradient]="true">
-</ngx-charts-bar-vertical>
-</div>
 
 </BODY>
 

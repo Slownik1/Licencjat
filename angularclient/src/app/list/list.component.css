@@ -24,9 +24,34 @@ table{
   float: left;
   width: 50%;
   border-right-style: solid;
+  
 }
 td{
   text-align: center;
 }
+#incomeTr{
+  background: rgb(133,187,101);
+  background: linear-gradient(90deg, rgba(133,187,101,1) 0%, rgba(0,212,255,0) 100%);
+}
+#outcomeTr{
+  background: rgb(255,40,0);
+  background: linear-gradient(90deg, rgba(255,40,0,1) 0%, rgba(0,212,255,0) 100%);
+}
+#divIncome{
+  background: rgb(133,187,101);
+  background: linear-gradient(90deg, rgba(133,187,101,0) 0%, rgba(0,212,255,0) 100%);
+}
+
+#divOutcome{
+  background: rgb(255,40,0);
+  background: linear-gradient(90deg, rgba(255,40,0,1) 0%, rgba(0,212,255,0) 100%);
+}
+img{
+  height: auto;
+  width: auto;
+  max-height: 40px;
+  max-width: 40px;
+}
+
 
 

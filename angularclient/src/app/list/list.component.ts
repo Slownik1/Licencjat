@@ -26,8 +26,6 @@ export class ListComponent implements OnInit{
     this.outgoingService.findAll().subscribe(data =>{
       this.outcomes =data;
     })
-    console.log(this.incomeService);
-
   }
 
 }
