@@ -39,7 +39,7 @@ td{
 }
 #divIncome{
   background: rgb(133,187,101);
-  background: linear-gradient(90deg, rgba(133,187,101,0) 0%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(90deg, rgba(133,187,101,1) 0%, rgba(0,212,255,0) 100%);
 }
 
 #divOutcome{

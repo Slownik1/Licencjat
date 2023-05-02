@@ -8,7 +8,6 @@ import { ListComponent } from './list/list.component';
 import { IncomeFormComponent } from './incoming/income-form/income-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
-import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -24,7 +23,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DropDownListModule,
     HttpClientModule,
     BrowserAnimationsModule,
     NgxChartsModule

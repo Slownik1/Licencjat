@@ -18,11 +18,14 @@
         <form (ngSubmit)="onSubmit()" #outcomeForm="ngForm">
           <input type="number"  name ="amount" [(ngModel)]="outcome.amount" id="inputForForm" placeholder="Amount" required #users="ngModel"><br>
           <input type="user" name="users" [(ngModel)]="outcome.users"  id="inputForForm" placeholder="User" required #name="ngModel"><br>
-          <input type="text" name="groupReason" [(ngModel)]="outcome.groupReason" id="inputForForm" placeholder="Group Reason" required #groupReason="ngModel"><br>
+          <select type="text" name="groupReason" id="inputForForm" placeholder="Group reason">
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Travel</option>
+            <option>Entertaiment</option>
+            <option>Other</option>
+          </select>
           <input type="text" name="description" [(ngModel)]="outcome.description" id="inputForForm" placeholder="Description" required #description="ngModel"><br>
-
-          <ejs-dropdownlist [dataSource]="groupData" [fields]="dataFields">
-          </ejs-dropdownlist>
     
           <input type=submit id="submitForm" value="SEND"><br>
         </form>
