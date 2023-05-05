@@ -1,15 +1,16 @@
 package com.example.Licencjat.Exchange;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.propertyeditors.CurrencyEditor;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class ExchangeService {
 
-    public final OutsideApi outsidesApi;
+    private final OutsideApi outsidesApi;
 
-    public Rate getRatio(){
+    public CurrencyDTO getRatio(){
         return outsidesApi.getRatio();
     }
 

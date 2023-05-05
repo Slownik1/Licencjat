@@ -49,10 +49,5 @@ public class WebController{
 
         return "list";
     }
-//    @RequestMapping(value="/ratio")
-//    public String Exchange(Model model){
-//        model.addAttribute("ratio", rate);
-//        return "ratio";
-//    }
 
 }

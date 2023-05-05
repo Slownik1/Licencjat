@@ -12,9 +12,8 @@ public class ExchangeControler {
         this.exchangeService = exchangeService;
     }
 
-
     @GetMapping (path="/ratio")
-    public Rate getRatio(){
+    public CurrencyDTO getRatio(){
 
         return exchangeService.getRatio();
     }

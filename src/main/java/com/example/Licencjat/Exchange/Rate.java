@@ -10,9 +10,4 @@ public class Rate {
     private String effectiveDate;
     private float mid;
 
-    @Bean
-    public Rate rate(){
-        return new Rate();
-    }
-
 }
