@@ -4,7 +4,6 @@ import com.example.Licencjat.User.Users;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.lang.Nullable;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -13,7 +12,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ConfigurationToken {
+public class ConfirmationToken {
 
     @Id
     @SequenceGenerator(name= "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
@@ -37,11 +36,10 @@ public class ConfigurationToken {
     )
     private Users users;
 
-    public ConfigurationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, LocalDateTime confirmedAt, Users users) {
+    public ConfirmationToken(String token, LocalDateTime createdAt, LocalDateTime expiredAt, Users users) {
         this.token = token;
         this.createdAt = createdAt;
         this.expiresAt = expiredAt;
-        this.confirmedAt = confirmedAt;
         this.users = users;
     }
 }
