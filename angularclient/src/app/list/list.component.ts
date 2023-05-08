@@ -3,7 +3,7 @@ import { Outcome } from '../outgoing/outcome';
 import { Income } from '../incoming/income';
 import { IncomeService } from '../incoming/income.service';
 import { OutgoingService } from '../outgoing/outgoing.service';
-import {Dto} from '../incoming/dto'
+
 
 @Component({
   selector: 'app-list',
@@ -14,7 +14,7 @@ export class ListComponent implements OnInit{
 
   incomes: Income[];
   outcomes: Outcome[];
-  dto: Dto[];
+
 
   constructor(private incomeService: IncomeService, 
               private outgoingService: OutgoingService){ }
