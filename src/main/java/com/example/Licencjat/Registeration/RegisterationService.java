@@ -14,7 +14,7 @@ public class RegisterationService {
     private UserService userService;
 
     public String register(RegisterationRequest request) {
-        boolean isEmailValid = emailValidator.test(request.getEmailName());
+        boolean isEmailValid = emailValidator.test(request.getEmail());
         if(!isEmailValid){
             throw new IllegalStateException("Email is not valid");
         }
@@ -22,7 +22,7 @@ public class RegisterationService {
                 request.getFirstName(),
                 request.getLastName(),
                 request.getPassword(),
-                request.getEmailName(),
+                request.getEmail(),
                 UserRole.USER
         ));
     }

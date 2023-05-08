@@ -29,8 +29,8 @@ public class Users implements UserDetails {
     private String email;
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
-    private Boolean locked;
-    private Boolean enabled;
+    private Boolean locked = false;
+    private Boolean enabled = false;
 
     public Users(String firstName, String lastName, String password, String email, UserRole userRole) {
         this.firstName = firstName;
