@@ -20,7 +20,7 @@ public class WebController{
         this.outgoingService = outgoingService;
     }
 
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "/main")
     public String Index(){
         return "";
     }
