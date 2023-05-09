@@ -5,6 +5,7 @@ import com.example.Licencjat.User.UserService;
 import com.example.Licencjat.User.Users;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 
@@ -29,7 +30,7 @@ public class RegisterationService {
                 UserRole.USER
         ));
     }
-
+    @Transactional
     public String confirmToken(String token){
         ConfirmationToken confirmationToken = confirmationTokenService.getToken(token).orElseThrow(()->
                 new IllegalStateException("TOKEN NOT FOUND"));
