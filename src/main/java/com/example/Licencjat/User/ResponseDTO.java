@@ -2,13 +2,13 @@ package com.example.Licencjat.User;
 
 public class ResponseDTO {
 
-    private String sessionIs;
+    private String sessionId;
 
-    public String getSessionIs() {
-        return sessionIs;
+    public String getSessionId() {
+        return sessionId;
     }
 
-    public void setSessionIs(String sessionIs) {
-        this.sessionIs = sessionIs;
+    public void setSessionId(String sessionId) {
+        this.sessionId = sessionId;
     }
 }

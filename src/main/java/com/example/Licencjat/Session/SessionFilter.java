@@ -37,6 +37,7 @@ public class SessionFilter extends OncePerRequestFilter {
     String sessionId= request.getHeader(HttpHeaders.AUTHORIZATION);
     if(sessionId == null || sessionId.length()==0){
         filterChain.doFilter(request, response);
+        return;
     }
 
     String username = sessionRegister.getUsernameFromSession(sessionId);

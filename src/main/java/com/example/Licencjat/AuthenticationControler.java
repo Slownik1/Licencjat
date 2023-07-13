@@ -29,7 +29,7 @@ public class AuthenticationControler {
 
         String sessionId = sessionRegister.registerSession(userDTO.getUsername());
         ResponseDTO response = new ResponseDTO();
-        response.setSessionIs(sessionId);
+        response.setSessionId(sessionId);
 
         return ResponseEntity.ok(response);
 
