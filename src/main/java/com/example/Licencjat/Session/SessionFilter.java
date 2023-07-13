@@ -34,13 +34,13 @@ public class SessionFilter extends OncePerRequestFilter {
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
 
-    String sessionId= request.getHeader(HttpHeaders.AUTHORIZATION);
+    final String sessionId= request.getHeader(HttpHeaders.AUTHORIZATION);
     if(sessionId == null || sessionId.length()==0){
         filterChain.doFilter(request, response);
         return;
     }
 
-    String username = sessionRegister.getUsernameFromSession(sessionId);
+    final String username = sessionRegister.getUsernameFromSession(sessionId);
     if(username == null){
         filterChain.doFilter(request, response);
         return;

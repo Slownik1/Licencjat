@@ -40,6 +40,7 @@ public class AppConfiguration extends WebSecurityConfigurerAdapter {
         http = http.exceptionHandling().authenticationEntryPoint(
                 (request, response, authException) -> {
                     response.sendError(HttpServletResponse.SC_UNAUTHORIZED, authException.getMessage());
+                    System.out.println("TERST");
                 }
         ).and();
 
@@ -47,7 +48,7 @@ public class AppConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/login").permitAll()
                 .anyRequest().authenticated();
 
-        http.addFilterBefore(sessionFilter, UsernamePasswordAuthenticationFilter.class);
+        //http.addFilterBefore(sessionFilter, UsernamePasswordAuthenticationFilter.class);
 
     }
 
@@ -60,17 +61,5 @@ public class AppConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
-    }
-
-    public void setUserService(UserService userService) {
-        this.userService = userService;
-    }
-
-    public void setSessionFilter(SessionFilter sessionFilter) {
-        this.sessionFilter = sessionFilter;
-    }
-
-    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
     }
 }
