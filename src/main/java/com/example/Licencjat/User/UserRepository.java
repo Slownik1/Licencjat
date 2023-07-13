@@ -11,6 +11,7 @@ public class UserRepository {
 
     public void setUpUser(){
         REGISTERED_USER.put("ADMIN", buildUser("ADMIN", "$2a$10$4EvCE3wPMBPYEV/FA8B.3e1mrlCGaVuq.cO0x0fmrt198H61q/dFG"));
+        REGISTERED_USER.put("ADMIN", buildUser("USER", "$2a$10$4EvCE3wPMBPYEV/FA8B.3e1mrlCGaVuq.cO0x0fmrt198H61q/dFG"));
     }
 
     private User buildUser(String username, String password) {

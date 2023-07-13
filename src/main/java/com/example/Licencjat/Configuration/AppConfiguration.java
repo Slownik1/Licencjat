@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -20,17 +21,12 @@ import javax.servlet.http.HttpServletResponse;
 @EnableWebSecurity
 public class AppConfiguration extends WebSecurityConfigurerAdapter {
 
-    private final UserService userService;
-    private final SessionFilter sessionFilter;
-    private final PasswordEncoder passwordEncoder;
-
     @Autowired
-    public AppConfiguration(UserService userService, SessionFilter sessionFilter, PasswordEncoder passwordEncoder) {
-        this.userService = userService;
-        this.sessionFilter = sessionFilter;
-        this.passwordEncoder = passwordEncoder;
-    }
-
+    private UserService userService;
+    @Autowired
+    private SessionFilter sessionFilter;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -55,14 +51,26 @@ public class AppConfiguration extends WebSecurityConfigurerAdapter {
 
     }
 
-    @Override
     @Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+    AuthenticationManager authenticationManager(
+            AuthenticationConfiguration authenticationConfiguration) throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
     }
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+
+    public void setSessionFilter(SessionFilter sessionFilter) {
+        this.sessionFilter = sessionFilter;
+    }
+
+    public void setPasswordEncoder(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
     }
 }
