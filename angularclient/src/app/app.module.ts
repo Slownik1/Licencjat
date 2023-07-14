@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     OutgoingComponent,
     ListComponent,
     IncomeFormComponent,
-    OutgoingFormComponent
+    OutgoingFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

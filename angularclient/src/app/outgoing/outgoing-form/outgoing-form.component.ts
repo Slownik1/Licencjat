@@ -11,15 +11,6 @@ import { Observable } from 'rxjs';
 })
 export class OutgoingFormComponent {
 
-  groupData=[
-    {Id: 'Reason2', Reason: 'Bils'},
-    {Id: 'Reason1', Reason: 'Food'},
-    {Id: 'Reason1', Reason: 'Enterteiment'},
-    {Id: 'Reason1', Reason: 'Travel'},
-    {Id: 'Reason1', Reason: 'Transport'},
-    {Id: 'Reason1', Reason: 'Other'},
-  ];
-
   outcome: Outcome;
 
   constructor(
