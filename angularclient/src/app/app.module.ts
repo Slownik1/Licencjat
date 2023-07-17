@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -6,12 +7,12 @@ import { AppComponent } from './app.component';
 import { OutgoingComponent } from './outgoing/outgoing.component';
 import { ListComponent } from './list/list.component';
 import { IncomeFormComponent } from './incoming/income-form/income-form.component';
-import { HttpClientModule } from '@angular/common/http';
 import { OutgoingFormComponent } from './outgoing/outgoing-form/outgoing-form.component';
 import { NgxChartsModule }from '@swimlane/ngx-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { RequestInterceptor } from './request.interceptor';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     NgxChartsModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: RequestInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
